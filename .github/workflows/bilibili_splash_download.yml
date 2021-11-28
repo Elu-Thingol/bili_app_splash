@@ -52,3 +52,4 @@ jobs:
           body: file://report.txt
           to: ${{ secrets.MAILADDR }}
           from: GitHub Actions
+          attachments: report.txt
