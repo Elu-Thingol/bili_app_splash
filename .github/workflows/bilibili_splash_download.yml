@@ -28,8 +28,8 @@ jobs:
           python get_app_splash.py
       - name: commit
         run: |
-          git config --global user.email 3377911508@qq.com
-          git config --global user.name zjkwdy
+          git config --global user.email ${{ secrets.GITEMAIL }}
+          git config --global user.name ${{ secrets.GITNAME }}
           git add .
           git commit -m "B站开屏图更新" -a
         
@@ -50,5 +50,5 @@ jobs:
           password: ${{ secrets.MAILPASSWORD }}
           subject: B站开屏图下载成功
           body: file://report.txt
-          to: 3377911508@qq.com
+          to: ${{ secrets.MAILADDR }}
           from: GitHub Actions
